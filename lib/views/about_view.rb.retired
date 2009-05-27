@@ -1,0 +1,19 @@
+framework 'webkit'
+
+class AboutView
+
+  def self.description 
+    "About SDRuby Raffle" 
+  end
+  
+  def self.create(parent=nil)
+    
+    layout_view :frame => [0, 0, 0, 0], :layout => {:expand => [:width, :height]}, :margin => 0, :spacing => 0 do |view|
+      site = web_view(:layout => {:expand =>  [:width, :height]}, :url => "http://sdruby.com")
+      view << site
+      view << label(:text => "This Application was written by Matt Aimonetti using MacRuby 0.4")
+    end
+  end
+  
+  RaffleApplication.register(self)
+end

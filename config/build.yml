@@ -1,0 +1,8 @@
+name: Raffle
+load: lib/application.rb
+version: "1.0"
+icon: resources/sdruby.icns
+resources:
+  - resources/**/*.*
+sources: 
+  - lib/**/*.rb
